@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>관리자 페이지</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            margin: 20px 0;
+            color: #333;
+        }
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        .grid-item {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        img {
+            max-width: 90%;
+            height: auto;
+            margin-bottom: 10px;
+        }
+        .qr-code {
+            width: 150px;
+            height: 150px;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>관리자 페이지</h1>
+    <div class="grid-container">
+        <% qrCodes.forEach(function(item) { %>
+            <div class="grid-item">
+                <p><strong>생성 시간:</strong> <%= item.timestamp %></p>
+                <p><strong>QR 코드:</strong></p>
+                <img src="<%= item.qrCode %>" alt="QR Code" class="qr-code">
+
+                <p><strong>사진:</strong></p>
+                <% if (item.photoUrl) { %>
+                    <img src="<%= item.photoUrl %>" alt="Result Image">
+                <% } else { %>
+                    <p>사진이 없습니다.</p>
+                <% } %>
+
+                <p>
+                    <strong>QR 링크:</strong>
+                    <a href="<%= item.qrLink %>" target="_blank"><%= item.qrLink %></a>
+                </p>
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>

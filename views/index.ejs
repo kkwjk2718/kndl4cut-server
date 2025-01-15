@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큰들네컷 - 네컷사진 부스</title>
+    <style>
+        /* 기본 스타일 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        /* 전체 레이아웃 */
+        .layout {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f9f9f9;
+        }
+
+        /* 헤더 스타일 */
+        header {
+            background-color: #000;
+            color: #fff;
+            width: 100%;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            margin-top: 5px;
+            font-weight: 300;
+        }
+
+        /* 메인 컨텐츠 스타일 */
+        .content {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 40px;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        .intro {
+            font-size: 1.5rem;
+            line-height: 1.6;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .price {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #0078ff;
+            margin-bottom: 20px;
+        }
+
+        /* 이벤트 섹션 */
+        .event-section {
+            width: 100%;
+            text-align: left;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #ddd;
+        }
+
+        .event-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .event-steps {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 0 auto;
+            max-width: 800px;
+        }
+
+        .event-steps li {
+            margin-bottom: 15px;
+        }
+
+        /* 인스타그램 링크 */
+        .instagram-link {
+            display: inline-block;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e4405f;
+            text-decoration: none;
+            margin: 20px 0;
+            transition: color 0.3s;
+        }
+
+        .instagram-link:hover {
+            color: #c13584;
+        }
+
+        /* 하단 정보 */
+        .credits, .school-info {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .school-info {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <!-- 헤더 -->
+        <header>
+            <h1>큰들네컷</h1>
+            <p>여러분을 위한 특별한 네컷사진 부스</p>
+        </header>
+
+        <!-- 메인 컨텐츠 -->
+        <div class="content">
+            <p class="intro">
+                📸 **CUT 동아리**가 운영하는 <span class="highlight">네컷사진 부스</span>에 오신 것을 환영합니다!<br>
+                <span class="price">한 장당 1,000원</span>으로 소중한 순간을 남기세요!
+            </p>
+
+            <!-- 인스타그램 링크 -->
+            <a href="https://www.instagram.com/kndl.4cut/" target="_blank" class="instagram-link">
+                📷 큰들네컷 공식 인스타그램 바로가기 (@kndl.4cut)
+            </a>
+
+            <!-- 이벤트 섹션 -->
+            <div class="event-section">
+                <p class="event-title">🎉 큰들네컷 인스타그램 이벤트 🎉</p>
+                <ul class="event-steps">
+                    <li>1. **큰들네컷 인스타그램**을 팔로우한다. (<a href="https://www.instagram.com/kndl.4cut/" target="_blank">@kndl.4cut</a>)</li>
+                    <li>2. 인화된 사진 **or** QR 코드 접속 사이트를 촬영 혹은 캡쳐한다.</li>
+                    <li>3. 큰들네컷 인스타그램을 **언급**하고 스토리 **or** 게시물을 업로드한다.</li>
+                    <li>4. 교환권을 뽑아서 경품으로 교환한다.</li>
+                </ul>
+            </div>
+
+            <!-- 학교 운영 정보 -->
+            <p class="school-info">운영: 경남과학고등학교 <br> 주관: CUT 동아리</p>
+
+            <!-- 제작자 정보 -->
+            <p class="credits">제작: 김건우, 전지윤</p>
+        </div>
+    </div>
+</body>
+</html>

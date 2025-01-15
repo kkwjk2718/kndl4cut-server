@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>큰들네컷 실시간 사진 전시</title>
+    <style>
+        /* 전체 화면 스타일 */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin: 20px 0;
+        }
+
+        .photo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            width: 90%;
+            max-width: 1800px;
+        }
+
+        .photo-item {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            border: 2px solid #444;
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+        }
+
+        .photo-item img {
+            max-width: 100%;
+            height: auto;
+            object-fit: cover;
+        }
+    </style>
+    <script>
+        // 페이지 자동 새로고침 (10초 간격)
+        setInterval(() => {
+            window.location.reload();
+        }, 10000); // 10초마다 새로고침
+    </script>
+</head>
+<body>
+    <h1>📸 큰들네컷 실시간 사진 전시 📸</h1>
+    <div class="photo-grid">
+        <% photos.forEach(function(photo) { %>
+            <div class="photo-item">
+                <img src="<%= photo %>" alt="네컷사진">
+            </div>
+        <% }); %>
+    </div>
+</body>
+</html>
